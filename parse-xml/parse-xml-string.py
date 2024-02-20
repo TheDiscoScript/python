@@ -22,7 +22,6 @@ def main(xml_data):
     xml_data = unescape_xml_string(xml_data)
     dom = xml.dom.minidom.parseString(xml_data)
 
-    # Remove empty lines
     remove_whitespace_nodes(dom.documentElement)
 
     pretty_xml_as_string = dom.toprettyxml()
